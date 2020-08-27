@@ -26,6 +26,6 @@ int main(void)
 		}
 
 	}
-	printf("È¦¼ö ÃÖ´ñ°ªÀº %dÀÌ¸ç, Â¦¼ö ÃÖ´ñ°ªÀº %dÀÔ´Ï´Ù.\n", oddMax, evenMax);
+	printf("í™€ìˆ˜ ìµœëŒ“ê°’ì€ %dì´ë©°, ì§ìˆ˜ ìµœëŒ“ê°’ì€ %dì…ë‹ˆë‹¤.\n", oddMax, evenMax);
 	return 0;
 }
