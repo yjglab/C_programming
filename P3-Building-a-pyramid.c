@@ -3,7 +3,7 @@
 int main()
 {
 	int floor;
-	printf("½×À¸½Ç Ãþ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. ");
+	printf("ìŒ“ìœ¼ì‹¤ ì¸µ ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”. ");
 	scanf_s("%d", &floor);
 
 	for (int i = 0; i < floor; i++)
@@ -14,7 +14,7 @@ int main()
 		}
 		for (int a = 0; a < i*2+1; a++)
 		{
-			printf("¡ã");
+			printf("â–²");
 		}
 		printf("\n");
 	}

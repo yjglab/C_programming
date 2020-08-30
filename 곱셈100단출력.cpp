@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//구구단 출력기입니다. 100단까지 입력되어 있고 추가 가능합니다. yjg lab
+//100단까지 입력되어 있
 int main(void)
 {
 	int x, i;
