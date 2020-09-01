@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <time.h>
 
+// ë‚˜ë„ ê³ ì–‘ì´ ìžˆì–´ by. yjglab
+
 int level;
 int hungerIndex[5];
 int* ptrcat;
@@ -14,44 +16,44 @@ int checkCatsAlive();
 int main(void)
 {
 	//intro
-	printf("\n\n¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡   °í¾çÀÌ Ãò¸£¸ÔÀÌ±â   ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n\n");
-	printf("\n\n\t  ... ½ÃÀÛÇÏ·Á¸é EnterÅ°¸¦ ´©¸£¼¼¿ä ...\n\n");
+	printf("\n\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€   ê³ ì–‘ì´ ì¸„ë¥´ë¨¹ì´ê¸°   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n\n");
+	printf("\n\n\t  ... ì‹œìž‘í•˜ë ¤ë©´ Enterí‚¤ë¥¼ ëˆ„ë¥´ì„¸ìš” ...\n\n");
 	getchar();
 
-	printf("\n\n¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡   1: °ÔÀÓ½ÃÀÛ  2: °ÔÀÓ¹æ¹ý  3: °ÔÀÓÁ¾·á   ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n\n\n");
+	printf("\n\nâ”€â”€â”€â”€â”€â”€â”€â”€   1: ê²Œìž„ì‹œìž‘  2: ê²Œìž„ë°©ë²•  3: ê²Œìž„ì¢…ë£Œ   â”€â”€â”€â”€â”€â”€â”€â”€â”€\n\n\n");
 	int start;
 	scanf_s("%d", &start);
 
 	if (start == 1)
 	{
-		printf("\n\n¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡   °ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù   ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n\n");
+		printf("\n\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€   ê²Œìž„ì„ ì‹œìž‘í•©ë‹ˆë‹¤   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n\n");
 	}
 	else if (start == 2)
 	{
-		printf("\n\n¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡        °ÔÀÓ ¹æ¹ý       ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n\n");
-		printf("\n\n ´ç½ÅÀº 5¸¶¸®ÀÇ °í¾çÀÌ¸¦ Å°¿ì°í ÀÖ´Ù.\n ¹äÀ» ÁÖÁö ¾Ê¾Æ °í¾çÀÌµéÀÇ Çë°ÅÁö¼ö°¡ ¶³¾îÁö°í ÀÖ´Ù!\n °í¾çÀÌµé¿¡°Ô Ãò¸£¸¦ ¸Ô¿©¼­ ¹è°íÆÄÇÏÁö ¾Êµµ·Ï ¸¸µé¾î¶ó!\n Çë°ÅÁö¼ö°¡ 0ÀÌ µÇ¸é °í¾çÀÌµéÀº Á×°ÔµÈ´Ù.\n\n\n\n");
-		printf("¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n\n");
+		printf("\n\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€        ê²Œìž„ ë°©ë²•       â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n\n");
+		printf("\n\n ë‹¹ì‹ ì€ 5ë§ˆë¦¬ì˜ ê³ ì–‘ì´ë¥¼ í‚¤ìš°ê³  ìžˆë‹¤.\n ë°¥ì„ ì£¼ì§€ ì•Šì•„ ê³ ì–‘ì´ë“¤ì˜ í—ê±°ì§€ìˆ˜ê°€ ë–¨ì–´ì§€ê³  ìžˆë‹¤!\n ê³ ì–‘ì´ë“¤ì—ê²Œ ì¸„ë¥´ë¥¼ ë¨¹ì—¬ì„œ ë°°ê³ íŒŒí•˜ì§€ ì•Šë„ë¡ ë§Œë“¤ì–´ë¼!\n í—ê±°ì§€ìˆ˜ê°€ 0ì´ ë˜ë©´ ê³ ì–‘ì´ë“¤ì€ ì£½ê²Œëœë‹¤.\n\n\n\n");
+		printf("â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n\n");
 	}
 	else if (start == 3)
 	{
-		printf("\n\n¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡   °ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù   ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n\n");
+		printf("\n\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€   ê²Œìž„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n\n");
 		exit(0);
 	}
 	else
 	{
-		printf(" \n\n ÀÔ·Â ¿À·ù ! (1~3) ¼ýÀÚ¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä !\n");
+		printf(" \n\n ìž…ë ¥ ì˜¤ë¥˜ ! (1~3) ìˆ«ìžë§Œ ìž…ë ¥í•´ì£¼ì„¸ìš” !\n");
 		exit(0);
 	}
 	getchar();
-	printf("\n\n\n\t  ... ½ÃÀÛÇÏ·Á¸é EnterÅ°¸¦ ´©¸£¼¼¿ä ...\n\n\n\n");
+	printf("\n\n\n\t  ... ì‹œìž‘í•˜ë ¤ë©´ Enterí‚¤ë¥¼ ëˆ„ë¥´ì„¸ìš” ...\n\n\n\n");
 	getchar();
-	printf("¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n\n\n\n\n\n");
+	printf("â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n\n\n\n\n\n");
 
 	long startTime = 0;
-	long totalPassedTime = 0; // °ÔÀÓ ÁøÇà½Ã°£
-	long prvPassedTime = 0; // ¸¶Áö¸·À¸·Î ¸ÔÀÌ ÁØ ½Ã°£À¸·Î ºÎÅÍ Èå¸¥ ½Ã°£
+	long totalPassedTime = 0; // ê²Œìž„ ì§„í–‰ì‹œê°„
+	long prvPassedTime = 0; // ë§ˆì§€ë§‰ìœ¼ë¡œ ë¨¹ì´ ì¤€ ì‹œê°„ìœ¼ë¡œ ë¶€í„° íë¥¸ ì‹œê°„
 
-	int N; // ¸î¹ø °í¾çÀÌ¿¡°Ô Ãò¸£¸¦.
+	int N; // ëª‡ë²ˆ ê³ ì–‘ì´ì—ê²Œ ì¸„ë¥´ë¥¼.
 	initData();
 
 	ptrcat = hungerIndex;
@@ -61,51 +63,51 @@ int main(void)
 	while (1)
 	{
 		showCats();
-		printf("¾î¶² °í¾çÀÌ¿¡°Ô Ãò¸£¸¦ ÁÙ·¡? ");
+		printf("ì–´ë–¤ ê³ ì–‘ì´ì—ê²Œ ì¸„ë¥´ë¥¼ ì¤„ëž˜? ");
 		scanf_s("%d", &N);
 
-		if (N < 1 || N > 5) // 1~5 ¿Ü ¼ýÀÚ ¿À·ù Ã¼Å©
+		if (N < 1 || N > 5) // 1~5 ì™¸ ìˆ«ìž ì˜¤ë¥˜ ì²´í¬
 		{
-			printf("\n\n¡Ø °í¾çÀÌ´Â 1¹ø~ 5¹ø¹Û¿¡ ¾ø¾î¿ä ¡Ø\n\n\n");
+			printf("\n\nâ€» ê³ ì–‘ì´ëŠ” 1ë²ˆ~ 5ë²ˆë°–ì— ì—†ì–´ìš” â€»\n\n\n");
 			continue;
 		}
 
 		totalPassedTime = (clock() - startTime) / CLOCKS_PER_SEC;
-		printf("\n\n ¦¢  ÁøÇà ½Ã°£ : %ldÃÊ °æ°ú               \n", totalPassedTime);
+		printf("\n\n â”‚  ì§„í–‰ ì‹œê°„ : %ldì´ˆ ê²½ê³¼               \n", totalPassedTime);
 
 		prvPassedTime = totalPassedTime - prvPassedTime;
-		printf(" ¦¢  ¸¶Áö¸·À¸·Î Ãò¸£ ¸ÔÀÎ ½Ã°£ : %ldÃÊ Àü \n\n", prvPassedTime);
+		printf(" â”‚  ë§ˆì§€ë§‰ìœ¼ë¡œ ì¸„ë¥´ ë¨¹ì¸ ì‹œê°„ : %ldì´ˆ ì „ \n\n", prvPassedTime);
 
-		decreaseIndex(prvPassedTime); // Çë°ÅÁö¼ö °¨¼Ò
+		decreaseIndex(prvPassedTime); // í—ê±°ì§€ìˆ˜ ê°ì†Œ
 
-		if (ptrcat[N - 1] <= 0) // °í¾çÀÌ Çë°ÅÁö¼ö°¡ 0ÀÌ¸é
+		if (ptrcat[N - 1] <= 0) // ê³ ì–‘ì´ í—ê±°ì§€ìˆ˜ê°€ 0ì´ë©´
 		{
-			printf("\n\n¡Ø %d¹ø °í¾çÀÌ°¡ Á×¾ú½À´Ï´Ù.. ¡Ø\n\n\n\n", N);
+			printf("\n\nâ€» %dë²ˆ ê³ ì–‘ì´ê°€ ì£½ì—ˆìŠµë‹ˆë‹¤.. â€»\n\n\n\n", N);
 		}
 		else if (ptrcat[N - 1] + 1 < 100)
 		{
-			printf("%d¹ø °í¾çÀÌ¿¡°Ô Ãò¸£¸¦ ¸Ô¿´½À´Ï´Ù\n\n", N);
-			ptrcat[N - 1] += 2; // Çë°ÅÁö¼ö Ãß°¡
+			printf("%dë²ˆ ê³ ì–‘ì´ì—ê²Œ ì¸„ë¥´ë¥¼ ë¨¹ì˜€ìŠµë‹ˆë‹¤\n\n", N);
+			ptrcat[N - 1] += 2; // í—ê±°ì§€ìˆ˜ ì¶”ê°€
 		}
 
-		if (totalPassedTime / 15 > level - 1) // level ½Ã½ºÅÛ
+		if (totalPassedTime / 15 > level - 1) // level ì‹œìŠ¤í…œ
 		{
 			level++;
-			printf("\n\n\n¡Ú °í¾çÀÌµéÀÌ Ãò¸£¸¦ ¸Ô°í ´ë»ç·®ÀÌ %d000 Kcal¿¡¼­ %d000 Kcal·Î ´Ã¾ú½À´Ï´Ù ¡Ú\n            ´ë»ç·® Áõ°¡ : ÀÌÁ¦ °í¾çÀÌµéÀÌ ´õ¿í ´õ ¹è°íÆÄÇÕ´Ï´Ù\n\n\n\n\n", level - 1, level);
+			printf("\n\n\nâ˜… ê³ ì–‘ì´ë“¤ì´ ì¸„ë¥´ë¥¼ ë¨¹ê³  ëŒ€ì‚¬ëŸ‰ì´ %d000 Kcalì—ì„œ %d000 Kcalë¡œ ëŠ˜ì—ˆìŠµë‹ˆë‹¤ â˜…\n            ëŒ€ì‚¬ëŸ‰ ì¦ê°€ : ì´ì œ ê³ ì–‘ì´ë“¤ì´ ë”ìš± ë” ë°°ê³ íŒŒí•©ë‹ˆë‹¤\n\n\n\n\n", level - 1, level);
 
 			if (level == 5)
 			{
-				printf("\n\n¡Ú °í¾çÀÌµéÀÇ ´ë»ç·®ÀÌ 5000 Kcal¸¦ ´Þ¼ºÇÏ¿© ¾ÆÁÖ ¸¸Á·½º·¯¿ö ÇÕ´Ï´Ù! ¡Ú\n                ÀÌÁ¦ Ãò¸£¸¦ ±×¸¸Áàµµ µÉ °Í °°½À´Ï´Ù\n\n");
-				printf("\n\n¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡   °ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù   ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n\n");
+				printf("\n\nâ˜… ê³ ì–‘ì´ë“¤ì˜ ëŒ€ì‚¬ëŸ‰ì´ 5000 Kcalë¥¼ ë‹¬ì„±í•˜ì—¬ ì•„ì£¼ ë§Œì¡±ìŠ¤ëŸ¬ì›Œ í•©ë‹ˆë‹¤! â˜…\n                ì´ì œ ì¸„ë¥´ë¥¼ ê·¸ë§Œì¤˜ë„ ë  ê²ƒ ê°™ìŠµë‹ˆë‹¤\n\n");
+				printf("\n\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€   ê²Œìž„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n\n");
 				exit(0);
 			}
 
 		}
 
-		if (checkCatsAlive() == 0) // ÀüÃ¼ °í¾çÀÌ »ýÁ¸ ¿©ºÎ È®ÀÎ
+		if (checkCatsAlive() == 0) // ì „ì²´ ê³ ì–‘ì´ ìƒì¡´ ì—¬ë¶€ í™•ì¸
 		{
-			printf("\n\n¡Ø ¸ðµç °í¾çÀÌµéÀÌ ¹è°íÆÄ¼­ Á×¾î¹ö·È½À´Ï´Ù.. ¡Ø\n\n");
-			printf("\n\n¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡   °ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù   ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\n\n");
+			printf("\n\nâ€» ëª¨ë“  ê³ ì–‘ì´ë“¤ì´ ë°°ê³ íŒŒì„œ ì£½ì–´ë²„ë ¸ìŠµë‹ˆë‹¤.. â€»\n\n");
+			printf("\n\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€   ê²Œìž„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n\n");
 			exit(0);
 		}
 
@@ -118,16 +120,16 @@ int main(void)
 void initData()
 {
 	level = 1;
-	for (int i = 0; i < 5; i++) // °í¾çÀÌ 5¸¶¸®
+	for (int i = 0; i < 5; i++) // ê³ ì–‘ì´ 5ë§ˆë¦¬
 	{
-		hungerIndex[i] = 100; // Çë°ÅÁö¼ö (0 - 100)
+		hungerIndex[i] = 100; // í—ê±°ì§€ìˆ˜ (0 - 100)
 	}
 }
 
-void showCats() // °í¾çÀÌ ³ª¿­ and ÇöÀç Çë°ÅÁö¼ö ¾Ë¸²
+void showCats() // ê³ ì–‘ì´ ë‚˜ì—´ and í˜„ìž¬ í—ê±°ì§€ìˆ˜ ì•Œë¦¼
 {
-	printf("°í¾çÀÌ  %3d¹ø %3d¹ø %3d¹ø %3d¹ø %3d¹ø\n", 1, 2, 3, 4, 5);
-	printf("Çë°ÅÁö¼ö");
+	printf("ê³ ì–‘ì´  %3dë²ˆ %3dë²ˆ %3dë²ˆ %3dë²ˆ %3dë²ˆ\n", 1, 2, 3, 4, 5);
+	printf("í—ê±°ì§€ìˆ˜");
 	for (int i = 0; i < 5; i++)
 	{
 		printf("  %3d ", hungerIndex[i]);
@@ -139,7 +141,7 @@ void decreaseIndex(long passedTime)
 {
 	for (int i = 0; i < 5; i++)
 	{
-		hungerIndex[i] -= (level * 2 * (int)passedTime); // ³­ÀÌµµ Á¶Àý °ª
+		hungerIndex[i] -= (level * 2 * (int)passedTime); // ë‚œì´ë„ ì¡°ì ˆ ê°’
 		if (hungerIndex[i] < 0)
 		{
 			hungerIndex[i] = 0;
@@ -152,7 +154,7 @@ int checkCatsAlive()
 	for (int i = 0; i < 5; i++)
 	{
 		if (hungerIndex[i] > 0)
-			return 1; // true -> °è¼Ó ÁøÇà
+			return 1; // true -> ê³„ì† ì§„í–‰
 	}
 	return 0;
 }
