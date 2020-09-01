@@ -73,7 +73,7 @@ int main(void)
 		}
 
 		totalPassedTime = (clock() - startTime) / CLOCKS_PER_SEC;
-		printf("\n\n │  진행 시간 : %ld초 경과               \n", totalPassedTime);
+		printf("\n\n\n\n\n\n\n\n │  진행 시간 : %ld초 경과               \n", totalPassedTime);
 
 		prvPassedTime = totalPassedTime - prvPassedTime;
 		printf(" │  마지막으로 츄르 먹인 시간 : %ld초 전 \n\n", prvPassedTime);
